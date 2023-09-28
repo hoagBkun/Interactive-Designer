@@ -1,0 +1,134 @@
+@media (min-width: 576px) {
+}
+
+@media (max-width: 767.98px) {
+    /* Common */
+    .section-heading {
+        font-size: 3.6rem;
+    }
+    .section-desc {
+        font-size: 1.6rem;
+    }
+    .hidden-on-mobile {
+        display: none;
+    }
+    /* header */
+    .mail__text {
+        display: none;
+    }
+    .navbar {
+        display: none;
+    }
+    .header__top {
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(100% - 20px);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 0 16px;
+        border-bottom: 1px solid #d7d3e2;
+    }
+    .header__top-btn {
+        justify-content: flex-end;
+        order: 1;
+    }
+    .logo {
+        margin: 0;
+        content: url(../icon/logo-small.svg);
+    }
+    .mail__icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .mail__icon::before {
+        content: url(../icon/mail-icon-small.svg);
+    }
+
+    .hero__title {
+        font-size: 4.2rem;
+        line-height: 1.19;
+        letter-spacing: 0;
+    }
+    .hero__desc {
+        font-size: 1.6rem;
+    }
+    .hero__inner {
+        align-items: normal;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .hero-cta {
+        margin-top: 30px;
+    }
+    .hero-follow {
+        margin-top: 30px;
+    }
+
+    .hero-media {
+        justify-content: center;
+    }
+
+    .hero-media__img {
+        width: 259px;
+        height: 355px;
+    }
+    .hero__info::before {
+        display: none;
+    }
+    .hero-media::after {
+        content: url(../icon/hero-decor-mobile.svg);
+        display: block;
+        bottom: -4px;
+    }
+    .hero__info {
+        margin-bottom: 20px;
+    }
+    /* Client */
+    .client {
+        text-align: center;
+    }
+    .client__title {
+        width: 170px;
+        font-size: 2.8rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .client__title::before {
+        margin: 0 0 5px ;
+    }
+    .client__brand {
+        margin-top: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: flex-start;
+    }
+    
+    
+    /* Special */
+   
+    .special-item {
+        padding: 28px 50px;
+        margin-bottom: 30px;
+    }
+    .special-item__title {
+        font-size: 2.8rem;
+    }
+    .special-item__desc {
+        font-size: 1.6rem;
+    }
+    .special-item__icon {
+        transform: scale(0.85);
+    }
+    
+
+
+}
+
+@media (min-width: 992px) {
+    
+    .hidden-on-desktop {
+        display: none;
+    }
+}
