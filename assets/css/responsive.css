@@ -3,19 +3,24 @@
     .section-heading {
         font-size: 3.6rem;
     }
+
     .section-desc {
         font-size: 1.6rem;
     }
+
     .hidden-on-mobile {
         display: none;
     }
+
     /* header */
     .mail__text {
         display: none;
     }
+
     .navbar {
         display: none;
     }
+
     .header__top {
         grid-template-columns: repeat(2, auto);
         width: calc(100% - 20px);
@@ -24,14 +29,17 @@
         padding: 20px 0 16px;
         border-bottom: 1px solid #d7d3e2;
     }
+
     .header__top-btn {
         justify-content: flex-end;
         order: 1;
     }
+
     .logo {
         margin: 0;
         content: url(../icon/logo-small.svg);
     }
+
     .mail__icon {
         width: 32px;
         height: 32px;
@@ -40,6 +48,7 @@
     .mail__icon::before {
         content: url(../icon/mail-icon-small.svg);
     }
+
     .hero {
         height: 100vh;
     }
@@ -50,9 +59,11 @@
         line-height: 1.19;
         letter-spacing: 0;
     }
+
     .hero__desc {
         font-size: 1.6rem;
     }
+
     .hero__inner {
         align-items: normal;
         justify-content: flex-end;
@@ -62,6 +73,7 @@
     .hero-cta {
         margin-top: 30px;
     }
+
     .hero-follow {
         margin-top: 30px;
     }
@@ -74,21 +86,26 @@
         width: 259px;
         height: 355px;
     }
+
     .hero__info::before {
         display: none;
     }
+
     .hero-media::after {
         content: url(../icon/hero-decor-mobile.svg);
         display: block;
         bottom: -4px;
     }
+
     .hero__info {
         margin-bottom: 20px;
     }
+
     /* Client */
     .client {
         text-align: center;
     }
+
     .client__title {
         width: 170px;
         font-size: 2.8rem;
@@ -100,6 +117,7 @@
     .client__title::before {
         margin: 0 0 5px;
     }
+
     .client__brand {
         margin-top: 40px;
         grid-template-columns: repeat(2, 1fr);
@@ -112,12 +130,15 @@
         padding: 28px 50px;
         margin-bottom: 30px;
     }
+
     .special-item__title {
         font-size: 2.8rem;
     }
+
     .special-item__desc {
         font-size: 1.6rem;
     }
+
     .special-item__icon {
         transform: scale(0.85);
     }
@@ -127,17 +148,120 @@
         flex-direction: column;
         align-items: center;
     }
+
     .project__heading {
         margin-right: 0;
         text-align: center;
     }
+
     .project__desc {
         text-align: center;
     }
+
+    .project-item {
+        padding: 20px 14px;
+        column-gap: 22px;
+    }
+
     .project-item::after {
+        right: -198px;
         background: url(../icon/project-decor-sm.svg) no-repeat;
     }
-    
+
+    .project-item__title {
+        font-size: 2.4rem;
+    }
+
+    .project-item__desc {
+        font-size: 1.4rem;
+    }
+
+    .project-item__link {
+        font-size: 1.6rem;
+    }
+
+    .project-item__media {
+        width: 122px;
+        height: 93px;
+    }
+    /* Feedback */
+    .interactive__label {
+        font-size: 2rem;
+    }
+    .interactive__experience-qty {
+        font-size: 3rem;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 2px;
+    }
+
+    .interactive__experience-desc {
+        margin-top: 5px;
+    }
+
+    .interactive__experience-wrap:first-child {
+        order: 2;
+    }
+
+    .interactive__experience-wrap:last-child {
+        order: 3;
+    }
+
+    /* Feedback */
+
+    .feedback {
+        padding: 120px 0 66px;
+    }
+
+    .feedback::before {
+        content: url(../icon/feedback-decor-l-sm.svg);
+    }
+
+    .feedback::after {
+        content: url(../icon/feedback-decor-r-sm.svg)
+    }
+
+    .feedback-media {
+        height: 276px;
+    }
+
+    .feedback-media::before {
+        transform: translate(-50%, -50%) scale(0.6875);
+    }
+
+    .feedback-media::after {
+        padding: 13px 21px;
+        font-size: 1.2rem;
+    }
+
+    .feedback__inner {
+        margin-top: 120px;
+    }
+
+    .feedback__list {
+        margin: 40px auto 20px;
+    }
+
+    .feedback-item__text {
+        font-size: 1.8rem;
+    }
+
+    .feedback__author::after {
+        font-size: 2.4rem;
+    }
+    /* questions */
+    .question__heading {
+        width: 316px;
+    }
+
+    .question-item__title-text {
+        font-size: 2.4rem;
+        margin-right: 34px;
+    }
+
+    .question-item__desc {
+        font-size: 1.6rem;
+    }
+
 }
 
 @media (min-width: 992px) {

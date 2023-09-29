@@ -172,8 +172,6 @@
 
 /* Client */
 
-
-
 .client__title {
     display: inline-flex;
     width: 354px;
@@ -346,7 +344,14 @@
     object-fit: cover;
 }
 
-.project__more {
+.project-more {
+    position: relative;
+}
+
+.project__more-btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 50px;
     background: #fff;
     color: #080415;
@@ -362,6 +367,7 @@
 
 .feedback {
     position: relative;
+    z-index: 1;
     padding: 140px 0 74px;
     background: linear-gradient(180deg, #fff 50%, #fbfaff 50%);
 }
@@ -369,6 +375,7 @@
 .feedback::before {
     content: url(../icon/feedback-decor-l.svg);
     position: absolute;
+    z-index: -1;
     bottom: 0;
     left: 0;
     animation: appear 1.5s ease-in;
@@ -377,6 +384,7 @@
 .feedback::after {
     content: url(../icon/feedback-decor-r.svg);
     position: absolute;
+    z-index: -1;
     bottom: 0;
     right: 0;
     animation: appear 1.5s ease-in;
@@ -424,6 +432,7 @@
 .feedback-media {
     margin-top: 70px;
     position: relative;
+    height: 628px;
 }
 
 .feedback-media::before {
@@ -531,20 +540,35 @@
 
 .question-item {
     position: relative;
-    border-bottom: 2px solid #08182f;
     padding-left: 22px;
     margin-top: 60px;
 }
 
+.question-item::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 2px solid #08182f;
+
+}
+
 .question-item__info:has(.question-item__show:checked) > .question-item__desc {
-    margin: 24px 0 22px;
+    margin-top: 24px;
+    margin-bottom: 22px;
     height: 100%;
     opacity: 1;
 }
 
-.question-item__info:has(.question-item__show:checked) .question-item__title {
+.question-item__info:has(.question-item__show:checked) .question-item__title-text {
     color: var(--primary-color);
     padding-bottom: 0;
+}
+
+.question-item__info:has(.question-item__show:checked) ~ .question-item::after {
+    border-bottom: 2px solid var(--primary-color);
+    bottom: -22px;
 }
 
 .question-item__info:has(.question-item__show:checked)
@@ -562,6 +586,7 @@
     height: 0;
     opacity: 0;
     width: 487px;
+    max-width: 100%;
     color: #51586a;
     font-size: 1.8rem;
     line-height: 1.666;
@@ -569,14 +594,19 @@
 }
 
 .question-item__title {
+    display: flex;
+    align-items: center;
     position: relative;
+    padding-bottom: 34px;
+    transition: 0.3s ease-out;
+}
+
+.question-item__title-text {
     color: #080415;
     font-size: 3.2rem;
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: -0.128rem;
-    padding-bottom: 34px;
-    transition: 0.3s ease-out;
 }
 
 .question-item__title::before,
