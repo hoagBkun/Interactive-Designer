@@ -104,14 +104,18 @@
                 <div href="" class="header__top-btn">
                     <div class="mail">
                         <a href="#!" class="mail__icon"></a>
-                        <span class="mail__text"> hi@arif.interactive </span>
+                        <span class="mail__text hidden-on-mobile">
+                            hi@arif.interactive
+                        </span>
                     </div>
-                    <form action="" class="menu hidden-on-desktop ">
+                    <!-- menu on mobile -->
+                    <form action="" class="menu-btn hidden-on-desktop">
                         <label>
-                            <input type="checkbox" name="" id="" hidden />
-                            <div class="menu__wrap">
+                            
+                            <input type="checkbox" name="menu-btn__status" id="menu-btn__status" hidden checked/>
+                            <div class="menu-btn__wrap">
                                 <svg
-                                    class="menu__icon"
+                                    class="menu-btn__icon"
                                     width="17"
                                     height="8"
                                     viewBox="0 0 17 8"
@@ -136,21 +140,54 @@
                             </div>
                         </label>
                     </form>
+                    <div class="menu">
+                        <div class="menu__close">
+                            <label for="menu-btn__status" class="menu__close-wrap">
+                              
+                            </label>
+                        </div>
+                        <div class="menu__wrap">
+                            
+                            <nav class="menu-navbar">
+                                <ul class="menu-navbar__list">
+                                    <li class="menu-navbar__item">
+                                        <a href="#projects" class="menu-navbar__item-link">Projects</a>
+                                    </li>
+                                    <li class="menu-navbar__item">
+                                        <a href="#journey" class="menu-navbar__item-link">Journey</a>
+                                    </li>
+                                    <li class="menu-navbar__item">
+                                        <a href="#service" class="menu-navbar__item-link">Service</a>
+                                    </li>
+                                    <li class="menu-navbar__item">
+                                        <a href="#contact" class="menu-navbar__item-link">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <label for="menu-btn__status" class="menu-btn__close">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
+                                <path d="M 25 2 C 12.309534 2 2 12.309534 2 25 C 2 37.690466 12.309534 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z M 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 13.390466 46 4 36.609534 4 25 C 4 13.390466 13.390466 4 25 4 z M 32.990234 15.986328 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.990234 15.986328 z"></path>
+                                </svg>
+                        </label>
+                    </div>
                 </div>
-                <a href="/" class="logo"> </a>
-                <nav class="navbar">
+                <div class="logo">
+                    <a href="/" class="logo__icon"></a>
+                </div>
+                <nav class="navbar hidden-on-mobile">
                     <ul class="navbar__list">
                         <li class="navbar-item">
-                            <a href="#!" class="navbar-item__link">Projects</a>
+                            <a href="#projects" class="navbar-item__link">Projects</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="#!" class="navbar-item__link">Journey</a>
+                            <a href="#journey" class="navbar-item__link">Journey</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="#!" class="navbar-item__link">Service</a>
+                            <a href="#service" class="navbar-item__link">Service</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="#!" class="navbar-item__link">Contact</a>
+                            <a href="#contact" class="navbar-item__link">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -240,11 +277,10 @@
         </header>
         <main>
             <!-- services -->
-            <section class="services">
+            <section class="services" id="service">
                 <!-- client -->
                 <article class="client">
                     <div class="container">
-
                         <div class="row row-cols-lg-2 gy-0">
                             <div class="col-lg-4 col-12">
                                 <h2 class="client__title">
@@ -313,11 +349,13 @@
                         <div class="row row-cols-lg-1 row-cols-1">
                             <div class="col">
                                 <div class="special__top">
-                                    <h2 class="section-heading">Specialities</h2>
+                                    <h2 class="section-heading">
+                                        Specialities
+                                    </h2>
                                     <p class="section-desc">
                                         Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. In urna, non nisl tincidunt
-                                        ut elementum turpis.
+                                        adipiscing elit. In urna, non nisl
+                                        tincidunt ut elementum turpis.
                                     </p>
                                 </div>
                             </div>
@@ -400,7 +438,7 @@
                 </section>
             </section>
             <!-- projects -->
-            <section class="project">
+            <section class="project" id="projects">
                 <div class="container">
                     <div class="row row-cols-1 row-cols-lg-1">
                         <div class="col">
@@ -411,8 +449,8 @@
                                 </h2>
                                 <p class="section-desc project__desc">
                                     Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. In urna, non nisl tincidunt ut
-                                    elementum turpis.
+                                    adipiscing elit. In urna, non nisl tincidunt
+                                    ut elementum turpis.
                                 </p>
                             </div>
                         </div>
@@ -556,7 +594,9 @@
                                     </div>
                                     <div class="col">
                                         <div class="project__more">
-                                            <a href="#!" class="btn project__more-btn"
+                                            <a
+                                                href="#!"
+                                                class="btn project__more-btn"
                                                 >All Projects</a
                                             >
                                         </div>
@@ -568,7 +608,7 @@
                 </div>
             </section>
             <!-- Feedback -->
-            <section class="feedback">
+            <section class="feedback" id="journey">
                 <div class="container">
                     <div class="interactive">
                         <span class="interactive__label">Hey,,,,It’s Arif</span>
@@ -673,7 +713,9 @@
                                         hidden
                                     />
                                     <div class="question-item__title">
-                                        <h3 class="question-item__title-text">What is your hourly rate?</h3>
+                                        <h3 class="question-item__title-text">
+                                            What is your hourly rate?
+                                        </h3>
                                     </div>
                                 </label>
                                 <p class="question-item__desc">
@@ -695,7 +737,10 @@
                                         hidden
                                     />
                                     <div class="question-item__title">
-                                        <h3 class="question-item__title-text">What type of projects do you take on?</h3>
+                                        <h3 class="question-item__title-text">
+                                            What type of projects do you take
+                                            on?
+                                        </h3>
                                     </div>
                                 </label>
                                 <p class="question-item__desc">
@@ -717,7 +762,9 @@
                                         hidden
                                     />
                                     <div class="question-item__title">
-                                        <h3 class="question-item__title-text">How do you charge for projects ?</h3>
+                                        <h3 class="question-item__title-text">
+                                            How do you charge for projects ?
+                                        </h3>
                                     </div>
                                 </label>
                                 <p class="question-item__desc">
@@ -739,7 +786,9 @@
                                         hidden
                                     />
                                     <div class="question-item__title">
-                                        <h3 class="question-item__title-text">What time-zone do you work in?</h3>
+                                        <h3 class="question-item__title-text">
+                                            What time-zone do you work in?
+                                        </h3>
                                     </div>
                                 </label>
                                 <p class="question-item__desc">
@@ -761,7 +810,9 @@
                                         hidden
                                     />
                                     <div class="question-item__title">
-                                        <h3 class="question-item__title-text">How often can we communicate?</h3>
+                                        <h3 class="question-item__title-text">
+                                            How often can we communicate?
+                                        </h3>
                                     </div>
                                 </label>
                                 <p class="question-item__desc">
@@ -775,7 +826,7 @@
                 </div>
             </section>
             <!-- atmos -->
-            <section class="atmos" style="display: none">
+            <section class="atmos">
                 <div class="container">
                     <h2 class="section-heading">My atmosphere</h2>
                     <p class="section-desc">
@@ -784,7 +835,8 @@
                     </p>
                     <p class="atmos__label">@interaction_arif</p>
                     <div class="atmos__list">
-                        <div class="row row-cols-lg-3">
+                        <div class="row row-cols-lg-3 row-cols-1">
+                            <!-- item 1 -->
                             <div class="col">
                                 <article class="atmos__item">
                                     <figure class="atmos__item-media">
@@ -796,7 +848,8 @@
                                     </figure>
                                 </article>
                             </div>
-                            <div class="col">
+                            <!-- item 2 -->
+                            <div class="col hidden-on-mobile">
                                 <article class="atmos__item">
                                     <figure class="atmos__item-media">
                                         <img
@@ -807,7 +860,8 @@
                                     </figure>
                                 </article>
                             </div>
-                            <div class="col">
+                            <!-- item 3 -->
+                            <div class="col hidden-on-mobile">
                                 <article class="atmos__item">
                                     <figure class="atmos__item-media">
                                         <img
@@ -820,22 +874,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="dots hidden-on-desktop">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot dot--active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
                 </div>
             </section>
             <!-- CTA -->
-            <section class="cta" style="display: none">
+            <section class="cta" id="contact">
                 <div class="cta__inner">
                     <img
                         src="./assets/icon/party-icon.svg"
                         alt="cta"
                         class="cta__icon"
                     />
-                    <h2 class="section-heading">Got a project? Let's talk</h2>
+                    <h2 class="section-heading cta__heading">
+                        Got a project? Let's talk
+                    </h2>
                     <p class="section-desc">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         In urna, non nisl tincidunt ut elementum turpis.
                     </p>
-                    <a href="" class="btn cta__btn">Book a Call</a>
+                    <a href="#!" class="btn cta__btn">Book a Call</a>
                     <div class="cta__decor">
                         <img
                             src="./assets/icon/cta-decor-01.svg"
@@ -856,60 +919,57 @@
                 </div>
             </section>
         </main>
-        <footer class="footer" style="display: none">
+        <footer class="footer">
             <div class="footer__inner">
                 <!-- Footer Top -->
                 <div class="footer__top">
-                    <a href="">
-                        <div class="mail">
-                            <div class="mail__icon">
-                                <img src="./assets/icon/mail-icon.svg" alt="" />
-                            </div>
-                            <span class="mail__text">
-                                hi@arif.interactive
-                            </span>
-                        </div>
-                    </a>
-                    <a href="/">
-                        <img
-                            class="logo"
-                            src="./assets/icon/logo.svg"
-                            alt="logo"
-                        />
-                    </a>
-                    <nav class="navbar">
+                    <div class="mail footer__mail">
+                        <a href="#!" class="mail__icon"></a>
+                        <span class="mail__text"> hi@arif.interactive </span>
+                    </div>
+                    <div class="logo footer__logo">
+                        <a href="/" class="logo__icon footer__logo-icon"></a>
+                    </div>
+                    <nav class="navbar footer__navbar">
                         <ul class="navbar__list">
                             <li class="navbar-item">
-                                <a href="#!" class="navbar-item__link"
+                                <a href="#projects" class="navbar-item__link"
                                     >Projects</a
                                 >
                             </li>
                             <li class="navbar-item">
-                                <a href="#!" class="navbar-item__link"
+                                <a href="#journey" class="navbar-item__link"
                                     >Journey</a
                                 >
                             </li>
                             <li class="navbar-item">
-                                <a href="#!" class="navbar-item__link"
+                                <a href="#service" class="navbar-item__link"
                                     >Service</a
                                 >
                             </li>
                             <li class="navbar-item">
-                                <a href="#!" class="navbar-item__link"
+                                <a href="#contact" class="navbar-item__link"
                                     >Contact</a
                                 >
                             </li>
                         </ul>
                     </nav>
                 </div>
+                <div class="separate hidden-on-mobile"></div>
                 <!-- footer bottom -->
                 <div class="footer__bottom">
                     <div class="footer__bottom-wrap">
                         <p class="copyright">
                             ©interactiveArif 2021. All rights reserved.
                         </p>
-                        <a href="" class="footer__link">Privacy Policy</a>
-                        <a href="" class="footer__link">Terms of Conditions</a>
+                        <div class="separate hidden-on-desktop"></div>
+                        <div class="">
+                            <a href="#!" class="footer__link">Privacy Policy</a>
+
+                            <a href="#!" class="footer__link"
+                                >Terms of Conditions</a
+                            >
+                        </div>
                     </div>
                 </div>
             </div>

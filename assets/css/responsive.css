@@ -12,14 +12,13 @@
         display: none;
     }
 
-    /* header */
-    .mail__text {
-        display: none;
+    .btn {
+        width: 154px;
+        height: 56px;
+        font-size: 1.6rem;
     }
 
-    .navbar {
-        display: none;
-    }
+    /* header */
 
     .header__top {
         grid-template-columns: repeat(2, auto);
@@ -36,6 +35,12 @@
     }
 
     .logo {
+        text-align: start;
+        width: 37px;
+        height: 44px;
+    }
+
+    .logo__icon {
         margin: 0;
         content: url(../icon/logo-small.svg);
     }
@@ -125,6 +130,9 @@
     }
 
     /* Special */
+    .special {
+        margin-top: 120px;
+    }
 
     .special-item {
         padding: 28px 50px;
@@ -217,7 +225,7 @@
     }
 
     .feedback::after {
-        content: url(../icon/feedback-decor-r-sm.svg)
+        content: url(../icon/feedback-decor-r-sm.svg);
     }
 
     .feedback-media {
@@ -249,6 +257,9 @@
         font-size: 2.4rem;
     }
     /* questions */
+    .question {
+        margin-top: 25px;
+    }
     .question__heading {
         width: 316px;
     }
@@ -262,6 +273,94 @@
         font-size: 1.6rem;
     }
 
+    /* Atmos */
+.atmos {
+    padding: 40px 0 50px;
+}
+
+    .atmos__label {
+
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .atmos__list {
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    /* CTA */
+    .cta__inner {
+        padding: 36px 22px;
+    }
+
+    .cta__heading {
+        --padding-x: 22px;
+
+        padding-left: var(--padding-x);
+        padding-right: var(--padding-x);
+    }
+
+    .cta__icon {
+        transform: scale(0.55);
+    }
+
+    .cta__decor-icon:first-of-type,
+    .cta__decor-icon:last-of-type {
+        display: none;
+    }
+
+    /* footer */
+    .footer__top {
+        margin-top: 70px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footer__mail {
+        order: 3;
+    }
+
+    .footer__navbar {
+        margin-bottom: 64px;
+        display: block;
+    }
+
+    .footer__logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .footer__logo-icon {
+        content: url(../icon/logo.svg);
+    }
+
+    .navbar-item {
+        padding: 0 18px;
+    }
+
+    .navbar-item__link {
+        font-size: 1.6rem;
+    }
+
+    .footer__bottom {
+        padding-top: 57px;
+        border-top: none;
+    }
+
+    .footer__bottom-wrap {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .copyright {
+        margin: 20px 0 0;
+    }
+
+    .separate {
+        margin-top: 30px;
+    }
 }
 
 @media (min-width: 992px) {
